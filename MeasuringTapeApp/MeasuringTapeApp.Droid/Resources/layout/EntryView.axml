@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="150px"
+		android:layout_margin="5px"
+		android:padding="10px"
+		android:text="Add Measuring Object"
+		local:MvxBind="Click AddObject"/>
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Object: " />
+    <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          local:MvxBind="Text Obj.Name" />
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Type: " />
+    <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          local:MvxBind="Text Obj.Type" />
+    <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Unit System: " />
+    <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          local:MvxBind="Text Obj.UnitSystem" />
+</LinearLayout>
