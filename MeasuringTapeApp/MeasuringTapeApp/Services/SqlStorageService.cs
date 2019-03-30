@@ -28,7 +28,7 @@ namespace MeasuringTapeApp.Services
         {
             if (obj == null)
             {
-                throw new Exception("Cannot add null computer");
+                throw new Exception("Cannot add null measured Object");
             }
             await connection.InsertAsync(obj);
             return true;
@@ -38,6 +38,11 @@ namespace MeasuringTapeApp.Services
         {
             return new ObservableCollection<MeasuredObject>(await connection.Table<MeasuredObject>().ToListAsync());
         }
+
+        //public async Task<MeasuredObject> getLastMeasuredObject()
+        //{
+        //    //TODO
+        //}
 
         public async Task<bool> Reset()
         {

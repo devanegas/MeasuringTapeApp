@@ -15,13 +15,21 @@ using MvvmCross.Platforms.Android.Views;
 namespace MeasuringTapeApp.Droid.Views
 {
     [Activity(Label = "Measurement", MainLauncher = true)]
-    class ListView : MvxActivity<ListViewModel>
+    public class ListView : MvxActivity<ListViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.ListView);
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

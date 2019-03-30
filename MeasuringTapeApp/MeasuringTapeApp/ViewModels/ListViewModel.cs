@@ -1,4 +1,4 @@
-﻿using MeasuringTapeApp.Droid.Views;
+﻿using MeasuringTapeApp.ViewModels;
 using MeasuringTapeApp.Models;
 using MeasuringTapeApp.Services;
 using MvvmCross.Commands;

@@ -14,6 +14,7 @@ namespace MeasuringTapeApp
         {
             base.Initialize();
             Mvx.IoCProvider.RegisterType<IMeasuringStorageService, SqlStorageService>();
+            Mvx.IoCProvider.RegisterType<IGeolocationService, GeolocationService>();
 
             RegisterAppStart<ListViewModel>();
         }

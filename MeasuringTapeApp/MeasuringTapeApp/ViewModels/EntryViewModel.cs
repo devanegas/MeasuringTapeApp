@@ -8,34 +8,36 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MeasuringTapeApp.Droid.Views
+namespace MeasuringTapeApp.ViewModels
 {
     public class EntryViewModel : MvxViewModel
     {
         private IMvxNavigationService _navigationService;
         private IMeasuringStorageService _measuringStorageService;
+        private IGeolocationService _geolocationService;
 
         public EntryViewModel(IMeasuringStorageService measuringStorageService,
-                                IMvxNavigationService navigationService)
+                                IMvxNavigationService navigationService, IGeolocationService geolocationService)
         {
             _navigationService = navigationService;
             _measuringStorageService = measuringStorageService;
+            _geolocationService = geolocationService;
         }
 
 
         private MeasuredObject obj;
-        private MvxCommand addObject;
+        private MvxCommand next;
 
         public MeasuredObject Obj => obj ?? (obj = new MeasuredObject());
 
-        public MvxCommand AddObject => addObject ?? (addObject = new MvxCommand(() =>
+        public MvxCommand NextButton => next ?? (next = new MvxCommand(() =>
         {
-            if (obj == null)
-            {
-                throw new Exception("Cannot add null Object");
-            }
+            
             _measuringStorageService.AddMeasuredObject(obj);
-            _navigationService.Navigate<ListViewModel>();
+            _navigationService.Navigate<MeasuringViewModel>();
+            //_navigationService.Navigate<ListViewModel>();
+
+
         }));
 
     }
