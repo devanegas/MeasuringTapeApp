@@ -1378,44 +1378,44 @@ namespace MeasuringTapeApp.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0c005b
-			public const int abc_background_cache_hint_selector_material_dark = 2131492955;
+			// aapt resource value: 0x7f0c0064
+			public const int abc_background_cache_hint_selector_material_dark = 2131492964;
 			
-			// aapt resource value: 0x7f0c005c
-			public const int abc_background_cache_hint_selector_material_light = 2131492956;
+			// aapt resource value: 0x7f0c0065
+			public const int abc_background_cache_hint_selector_material_light = 2131492965;
 			
-			// aapt resource value: 0x7f0c005d
-			public const int abc_btn_colored_borderless_text_material = 2131492957;
+			// aapt resource value: 0x7f0c0066
+			public const int abc_btn_colored_borderless_text_material = 2131492966;
 			
-			// aapt resource value: 0x7f0c005e
-			public const int abc_btn_colored_text_material = 2131492958;
+			// aapt resource value: 0x7f0c0067
+			public const int abc_btn_colored_text_material = 2131492967;
 			
-			// aapt resource value: 0x7f0c005f
-			public const int abc_color_highlight_material = 2131492959;
+			// aapt resource value: 0x7f0c0068
+			public const int abc_color_highlight_material = 2131492968;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int abc_hint_foreground_material_dark = 2131492960;
+			// aapt resource value: 0x7f0c0069
+			public const int abc_hint_foreground_material_dark = 2131492969;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int abc_hint_foreground_material_light = 2131492961;
+			// aapt resource value: 0x7f0c006a
+			public const int abc_hint_foreground_material_light = 2131492970;
 			
 			// aapt resource value: 0x7f0c0000
 			public const int abc_input_method_navigation_guard = 2131492864;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int abc_primary_text_disable_only_material_dark = 2131492962;
+			// aapt resource value: 0x7f0c006b
+			public const int abc_primary_text_disable_only_material_dark = 2131492971;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int abc_primary_text_disable_only_material_light = 2131492963;
+			// aapt resource value: 0x7f0c006c
+			public const int abc_primary_text_disable_only_material_light = 2131492972;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int abc_primary_text_material_dark = 2131492964;
+			// aapt resource value: 0x7f0c006d
+			public const int abc_primary_text_material_dark = 2131492973;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int abc_primary_text_material_light = 2131492965;
+			// aapt resource value: 0x7f0c006e
+			public const int abc_primary_text_material_light = 2131492974;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int abc_search_url_text = 2131492966;
+			// aapt resource value: 0x7f0c006f
+			public const int abc_search_url_text = 2131492975;
 			
 			// aapt resource value: 0x7f0c0001
 			public const int abc_search_url_text_normal = 2131492865;
@@ -1426,35 +1426,41 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0c0003
 			public const int abc_search_url_text_selected = 2131492867;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int abc_secondary_text_material_dark = 2131492967;
+			// aapt resource value: 0x7f0c0070
+			public const int abc_secondary_text_material_dark = 2131492976;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int abc_secondary_text_material_light = 2131492968;
+			// aapt resource value: 0x7f0c0071
+			public const int abc_secondary_text_material_light = 2131492977;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int abc_tint_btn_checkable = 2131492969;
+			// aapt resource value: 0x7f0c0072
+			public const int abc_tint_btn_checkable = 2131492978;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int abc_tint_default = 2131492970;
+			// aapt resource value: 0x7f0c0073
+			public const int abc_tint_default = 2131492979;
 			
-			// aapt resource value: 0x7f0c006b
-			public const int abc_tint_edittext = 2131492971;
+			// aapt resource value: 0x7f0c0074
+			public const int abc_tint_edittext = 2131492980;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int abc_tint_seek_thumb = 2131492972;
+			// aapt resource value: 0x7f0c0075
+			public const int abc_tint_seek_thumb = 2131492981;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int abc_tint_spinner = 2131492973;
+			// aapt resource value: 0x7f0c0076
+			public const int abc_tint_spinner = 2131492982;
 			
-			// aapt resource value: 0x7f0c006e
-			public const int abc_tint_switch_track = 2131492974;
+			// aapt resource value: 0x7f0c0077
+			public const int abc_tint_switch_track = 2131492983;
+			
+			// aapt resource value: 0x7f0c005c
+			public const int accent = 2131492956;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int accent_material_dark = 2131492868;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int accent_material_light = 2131492869;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int activated_color = 2131492962;
 			
 			// aapt resource value: 0x7f0c0053
 			public const int aqua = 2131492947;
@@ -1513,8 +1519,8 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0c003c
 			public const int design_bottom_navigation_shadow_color = 2131492924;
 			
-			// aapt resource value: 0x7f0c006f
-			public const int design_error = 2131492975;
+			// aapt resource value: 0x7f0c0078
+			public const int design_error = 2131492984;
 			
 			// aapt resource value: 0x7f0c003d
 			public const int design_fab_shadow_end_color = 2131492925;
@@ -1540,8 +1546,8 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0c0044
 			public const int design_snackbar_background_color = 2131492932;
 			
-			// aapt resource value: 0x7f0c0070
-			public const int design_tint_password_toggle = 2131492976;
+			// aapt resource value: 0x7f0c0079
+			public const int design_tint_password_toggle = 2131492985;
 			
 			// aapt resource value: 0x7f0c0012
 			public const int dim_foreground_disabled_material_dark = 2131492882;
@@ -1554,6 +1560,9 @@ namespace MeasuringTapeApp.Droid
 			
 			// aapt resource value: 0x7f0c0015
 			public const int dim_foreground_material_light = 2131492885;
+			
+			// aapt resource value: 0x7f0c0061
+			public const int divider = 2131492961;
 			
 			// aapt resource value: 0x7f0c0016
 			public const int error_color_material = 2131492886;
@@ -1579,8 +1588,11 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0c001a
 			public const int highlighted_text_material_light = 2131492890;
 			
-			// aapt resource value: 0x7f0c005a
-			public const int ic_launcher_background = 2131492954;
+			// aapt resource value: 0x7f0c0063
+			public const int ic_launcher_background = 2131492963;
+			
+			// aapt resource value: 0x7f0c005d
+			public const int lightPrimary = 2131492957;
 			
 			// aapt resource value: 0x7f0c0054
 			public const int lime = 2131492948;
@@ -1639,6 +1651,15 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0c0050
 			public const int olive = 2131492944;
 			
+			// aapt resource value: 0x7f0c005a
+			public const int primary = 2131492954;
+			
+			// aapt resource value: 0x7f0c005b
+			public const int primaryDark = 2131492955;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int primaryText = 2131492959;
+			
 			// aapt resource value: 0x7f0c0027
 			public const int primary_dark_material_dark = 2131492903;
 			
@@ -1675,6 +1696,9 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0c0030
 			public const int ripple_material_light = 2131492912;
 			
+			// aapt resource value: 0x7f0c0060
+			public const int secondaryText = 2131492960;
+			
 			// aapt resource value: 0x7f0c0031
 			public const int secondary_text_default_material_dark = 2131492913;
 			
@@ -1696,11 +1720,11 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0c0036
 			public const int switch_thumb_disabled_material_light = 2131492918;
 			
-			// aapt resource value: 0x7f0c0071
-			public const int switch_thumb_material_dark = 2131492977;
+			// aapt resource value: 0x7f0c007a
+			public const int switch_thumb_material_dark = 2131492986;
 			
-			// aapt resource value: 0x7f0c0072
-			public const int switch_thumb_material_light = 2131492978;
+			// aapt resource value: 0x7f0c007b
+			public const int switch_thumb_material_light = 2131492987;
 			
 			// aapt resource value: 0x7f0c0037
 			public const int switch_thumb_normal_material_dark = 2131492919;
@@ -1710,6 +1734,9 @@ namespace MeasuringTapeApp.Droid
 			
 			// aapt resource value: 0x7f0c0055
 			public const int teal = 2131492949;
+			
+			// aapt resource value: 0x7f0c005e
+			public const int textIcon = 2131492958;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int tooltip_background_dark = 2131492921;
@@ -2466,26 +2493,26 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f02006c
-			public const int avd_hide_password_1 = 2130837612;
-			
-			// aapt resource value: 0x7f02006d
-			public const int avd_hide_password_2 = 2130837613;
-			
 			// aapt resource value: 0x7f02006e
-			public const int avd_hide_password_3 = 2130837614;
+			public const int avd_hide_password_1 = 2130837614;
+			
+			// aapt resource value: 0x7f02006f
+			public const int avd_hide_password_2 = 2130837615;
+			
+			// aapt resource value: 0x7f020070
+			public const int avd_hide_password_3 = 2130837616;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f02006f
-			public const int avd_show_password_1 = 2130837615;
-			
-			// aapt resource value: 0x7f020070
-			public const int avd_show_password_2 = 2130837616;
-			
 			// aapt resource value: 0x7f020071
-			public const int avd_show_password_3 = 2130837617;
+			public const int avd_show_password_1 = 2130837617;
+			
+			// aapt resource value: 0x7f020072
+			public const int avd_show_password_2 = 2130837618;
+			
+			// aapt resource value: 0x7f020073
+			public const int avd_show_password_3 = 2130837619;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2506,55 +2533,61 @@ namespace MeasuringTapeApp.Droid
 			public const int design_snackbar_background = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int navigation_empty_icon = 2130837595;
+			public const int launch_image = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int notification_action_background = 2130837596;
+			public const int navigation_empty_icon = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int notification_bg = 2130837597;
+			public const int notification_action_background = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int notification_bg_low = 2130837598;
+			public const int notification_bg = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int notification_bg_low_normal = 2130837599;
+			public const int notification_bg_low = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int notification_bg_low_pressed = 2130837600;
+			public const int notification_bg_low_normal = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int notification_bg_normal = 2130837601;
+			public const int notification_bg_low_pressed = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int notification_bg_normal_pressed = 2130837602;
+			public const int notification_bg_normal = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int notification_icon_background = 2130837603;
-			
-			// aapt resource value: 0x7f02006a
-			public const int notification_template_icon_bg = 2130837610;
-			
-			// aapt resource value: 0x7f02006b
-			public const int notification_template_icon_low_bg = 2130837611;
+			public const int notification_bg_normal_pressed = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int notification_tile_bg = 2130837604;
+			public const int notification_icon_background = 2130837604;
+			
+			// aapt resource value: 0x7f02006c
+			public const int notification_template_icon_bg = 2130837612;
+			
+			// aapt resource value: 0x7f02006d
+			public const int notification_template_icon_low_bg = 2130837613;
 			
 			// aapt resource value: 0x7f020065
-			public const int notify_panel_notification_icon_bg = 2130837605;
+			public const int notification_tile_bg = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int Plus = 2130837606;
+			public const int notify_panel_notification_icon_bg = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int rounded_button = 2130837607;
+			public const int Plus = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int tooltip_frame_dark = 2130837608;
+			public const int rounded_button = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int tooltip_frame_light = 2130837609;
+			public const int splashscreen = 2130837609;
+			
+			// aapt resource value: 0x7f02006a
+			public const int tooltip_frame_dark = 2130837610;
+			
+			// aapt resource value: 0x7f02006b
+			public const int tooltip_frame_light = 2130837611;
 			
 			static Drawable()
 			{
@@ -3349,13 +3382,16 @@ namespace MeasuringTapeApp.Droid
 			public const int select_dialog_singlechoice_material = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int support_simple_spinner_dropdown_item = 2130968638;
+			public const int SplashScreen = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int toolbar = 2130968639;
+			public const int support_simple_spinner_dropdown_item = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int tooltip = 2130968640;
+			public const int toolbar = 2130968640;
+			
+			// aapt resource value: 0x7f040041
+			public const int tooltip = 2130968641;
 			
 			static Layout()
 			{
@@ -3372,12 +3408,6 @@ namespace MeasuringTapeApp.Droid
 			
 			// aapt resource value: 0x7f030000
 			public const int ic_launcher = 2130903040;
-			
-			// aapt resource value: 0x7f030001
-			public const int ic_launcher_foreground = 2130903041;
-			
-			// aapt resource value: 0x7f030002
-			public const int ic_launcher_round = 2130903042;
 			
 			static Mipmap()
 			{
@@ -3552,8 +3582,8 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0a015f
 			public const int Animation_Design_BottomSheetDialog = 2131362143;
 			
-			// aapt resource value: 0x7f0a0180
-			public const int AppTheme = 2131362176;
+			// aapt resource value: 0x7f0a0183
+			public const int AppTheme = 2131362179;
 			
 			// aapt resource value: 0x7f0a009a
 			public const int Base_AlertDialog_AppCompat = 2131361946;
@@ -4043,6 +4073,15 @@ namespace MeasuringTapeApp.Droid
 			
 			// aapt resource value: 0x7f0a0161
 			public const int Base_Widget_Design_TabLayout = 2131362145;
+			
+			// aapt resource value: 0x7f0a0180
+			public const int MyTheme = 2131362176;
+			
+			// aapt resource value: 0x7f0a0182
+			public const int MyTheme_ActionBar = 2131362178;
+			
+			// aapt resource value: 0x7f0a0181
+			public const int MyTheme_Base = 2131362177;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int Platform_AppCompat = 2131361822;

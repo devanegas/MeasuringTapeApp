@@ -14,7 +14,7 @@ using MvvmCross.Platforms.Android.Views;
 
 namespace MeasuringTapeApp.Droid.Views
 {
-    [Activity(Label = "Measurement", MainLauncher = true)]
+    [Activity(Label = "Measurement")]
     public class ListView : MvxActivity<ListViewModel>
     {
         protected override void OnCreate(Bundle savedInstanceState)

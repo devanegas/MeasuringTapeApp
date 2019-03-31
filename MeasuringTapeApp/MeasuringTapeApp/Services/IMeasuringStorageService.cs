@@ -10,8 +10,8 @@ namespace MeasuringTapeApp.Services
     public interface IMeasuringStorageService
     {
         Task<ObservableCollection<MeasuredObject>> getAllMeasuredObjects();
-        Task<bool> AddMeasuredObject(MeasuredObject comp);
-        Task<bool> UpdateMeasuredObject(MeasuredObject comp);
+        Task<bool> AddMeasuredObject(MeasuredObject obj);
+        Task<bool> UpdateMeasuredObject(MeasuredObject obj);
         Task<bool> Reset();
     }
 }

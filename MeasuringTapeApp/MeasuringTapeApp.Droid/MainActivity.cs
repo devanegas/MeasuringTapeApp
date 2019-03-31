@@ -16,7 +16,6 @@ namespace MeasuringTapeApp
         public MainActivity(IntPtr javaReference, JniHandleOwnership transfer)
             : base(javaReference, transfer)
         {
-
         }
     }
 }

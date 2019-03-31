@@ -39,6 +39,12 @@ namespace MeasuringTapeApp.Services
             return new ObservableCollection<MeasuredObject>(await connection.Table<MeasuredObject>().ToListAsync());
         }
 
+        public async Task<bool> UpdateMeasuredObject(MeasuredObject obj)
+        {
+            await connection.UpdateAsync(obj);
+            return true;
+        }
+
         //public async Task<MeasuredObject> getLastMeasuredObject()
         //{
         //    //TODO
@@ -50,9 +56,5 @@ namespace MeasuringTapeApp.Services
             return true;
         }
 
-        public Task<bool> UpdateMeasuredObject(MeasuredObject comp)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

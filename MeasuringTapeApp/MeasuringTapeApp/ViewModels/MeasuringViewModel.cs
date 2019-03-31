@@ -12,13 +12,12 @@ using Xamarin.Essentials;
 
 namespace MeasuringTapeApp.ViewModels
 {
-    public class MeasuringViewModel : MvxViewModel
+    public class MeasuringViewModel : MvxViewModel<MeasuredObject>
     {
         private IGeolocationService _geolocationService;
         private IMvxNavigationService _navigationService;
         private IMeasuringStorageService _measuringStorageService;
-        private Location startLocation;
-        private Location endLocation;
+
 
         public MeasuringViewModel(IMeasuringStorageService measuringStorageService,
                                 IMvxNavigationService navigationService, IGeolocationService geolocationService)
@@ -43,6 +42,29 @@ namespace MeasuringTapeApp.ViewModels
         public MeasuredObject Obj => obj ?? (obj = new MeasuredObject());
 
 
+
+        private Location startLocation;
+        public string StartLocation
+        {
+            get
+            {
+                string print1 = "Latitude: " + startLocation.Latitude.ToString();
+                string print2 = " | Longitude: " + startLocation.Longitude.ToString();
+                return String.Concat(print1, print2);
+            }
+        }
+        private Location endLocation;
+        public string EndLocation
+        {
+            get
+            {
+                string print1 = "Latitude: " + endLocation.Latitude.ToString();
+                string print2 = " | Longitude: " + endLocation.Longitude.ToString();
+                return String.Concat(print1, print2);
+            }
+        }
+
+
         private MvxCommand startMeasuring;
         private MvxCommand finishAndAddObject;
 
@@ -56,6 +78,7 @@ namespace MeasuringTapeApp.ViewModels
             //_measuringStorageService.AddMeasuredObject(obj);
             //_navigationService.Navigate<ListViewModel>();
             startLocation = await _geolocationService.GetLocationAsync();
+            await RaisePropertyChanged(nameof(StartLocation));
 
         }));
 
@@ -64,14 +87,15 @@ namespace MeasuringTapeApp.ViewModels
         {
 
             endLocation = await _geolocationService.GetLocationAsync();
-            obj.Measurement = Location.CalculateDistance(startLocation, endLocation, DistanceUnits.Kilometers);
-            _measuringStorageService.AddMeasuredObject(obj);
-            _navigationService.Navigate<ListViewModel>();
+            obj.Measurement = Location.CalculateDistance(startLocation, endLocation, DistanceUnits.Kilometers)*1000;
+            await RaisePropertyChanged(nameof(EndLocation));
+            await _measuringStorageService.UpdateMeasuredObject(obj);
+            await _navigationService.Navigate<ListViewModel>();
         }));
 
-        //public override void Prepare(MeasuredObject parameter)
-        //{
-        //    obj = parameter;
-        //}
+        public override void Prepare(MeasuredObject parameter)
+        {
+            obj = parameter;
+        }
     }
 }

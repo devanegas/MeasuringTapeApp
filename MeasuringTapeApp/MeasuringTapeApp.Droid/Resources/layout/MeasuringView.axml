@@ -13,6 +13,11 @@
 	android:text="Start"
 	local:MvxBind="Click StartMeasuring"/>
 
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    local:MvxBind="Text StartLocation" />
+
 <Button
 	android:layout_width="match_parent"
 	android:layout_height="150px"
@@ -20,5 +25,10 @@
 	android:padding="10px"
 	android:text="Finish"
 	local:MvxBind="Click FinishAndAddObject"/>
+
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    local:MvxBind="Text EndLocation" />
 
 </LinearLayout>

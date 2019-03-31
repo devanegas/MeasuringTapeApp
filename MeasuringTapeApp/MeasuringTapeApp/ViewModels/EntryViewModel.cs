@@ -34,7 +34,8 @@ namespace MeasuringTapeApp.ViewModels
         {
             
             _measuringStorageService.AddMeasuredObject(obj);
-            _navigationService.Navigate<MeasuringViewModel>();
+            //_navigationService.Navigate<MeasuringViewModel>();
+            _navigationService.Navigate(typeof(MeasuringViewModel), obj);
             //_navigationService.Navigate<ListViewModel>();
 
 
