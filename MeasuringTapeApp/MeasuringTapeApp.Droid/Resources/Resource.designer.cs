@@ -3582,8 +3582,8 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0a015f
 			public const int Animation_Design_BottomSheetDialog = 2131362143;
 			
-			// aapt resource value: 0x7f0a0183
-			public const int AppTheme = 2131362179;
+			// aapt resource value: 0x7f0a0184
+			public const int AppTheme = 2131362180;
 			
 			// aapt resource value: 0x7f0a009a
 			public const int Base_AlertDialog_AppCompat = 2131361946;
@@ -4074,14 +4074,14 @@ namespace MeasuringTapeApp.Droid
 			// aapt resource value: 0x7f0a0161
 			public const int Base_Widget_Design_TabLayout = 2131362145;
 			
-			// aapt resource value: 0x7f0a0180
-			public const int MyTheme = 2131362176;
+			// aapt resource value: 0x7f0a0181
+			public const int MyTheme = 2131362177;
+			
+			// aapt resource value: 0x7f0a0183
+			public const int MyTheme_ActionBar = 2131362179;
 			
 			// aapt resource value: 0x7f0a0182
-			public const int MyTheme_ActionBar = 2131362178;
-			
-			// aapt resource value: 0x7f0a0181
-			public const int MyTheme_Base = 2131362177;
+			public const int MyTheme_Base = 2131362178;
 			
 			// aapt resource value: 0x7f0a001e
 			public const int Platform_AppCompat = 2131361822;
@@ -4472,6 +4472,9 @@ namespace MeasuringTapeApp.Droid
 			
 			// aapt resource value: 0x7f0a010d
 			public const int ThemeOverlay_AppCompat_Light = 2131362061;
+			
+			// aapt resource value: 0x7f0a0180
+			public const int ThemeSplash = 2131362176;
 			
 			// aapt resource value: 0x7f0a010e
 			public const int Widget_AppCompat_ActionBar = 2131362062;

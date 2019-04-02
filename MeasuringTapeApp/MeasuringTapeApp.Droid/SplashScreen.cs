@@ -18,7 +18,7 @@ namespace MeasuringTapeApp.Droid
         Label = "Measurement"
         , MainLauncher = true
         , Icon = "@mipmap/ic_launcher"
-        , Theme = "@style/MyTheme"
+        , Theme = "@style/ThemeSplash"
         , NoHistory = true
         , ScreenOrientation = ScreenOrientation.Portrait)]
     public class SplashScreen : MvxSplashScreenActivity
