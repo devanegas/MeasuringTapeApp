@@ -37,6 +37,8 @@ namespace MeasuringTapeApp.ViewModels
 
         private ObservableCollection<MeasuredObject> measuredObjects;
         public ObservableCollection<MeasuredObject> MeasuredObjects { get => measuredObjects; }
+        
+
 
         private MeasuredObject obj;
         public MeasuredObject Obj => obj ?? (obj = new MeasuredObject());
@@ -71,12 +73,6 @@ namespace MeasuringTapeApp.ViewModels
         public MvxCommand StartMeasuring => startMeasuring ?? (startMeasuring = new MvxCommand(async () =>
         {
 
-            //if (obj == null)
-            //{
-            //    throw new Exception("Cannot add null Object");
-            //}
-            //_measuringStorageService.AddMeasuredObject(obj);
-            //_navigationService.Navigate<ListViewModel>();
             startLocation = await _geolocationService.GetLocationAsync();
             await RaisePropertyChanged(nameof(StartLocation));
 

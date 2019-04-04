@@ -24,6 +24,8 @@ namespace MeasuringTapeApp.ViewModels
             _geolocationService = geolocationService;
         }
 
+        public string[] StatusList => Models.Type.StatusList;
+        public string[] Unit => Models.Type.Units;
 
         private MeasuredObject obj;
         private MvxCommand next;
@@ -34,9 +36,17 @@ namespace MeasuringTapeApp.ViewModels
         {
             
             _measuringStorageService.AddMeasuredObject(obj);
-            //_navigationService.Navigate<MeasuringViewModel>();
-            _navigationService.Navigate(typeof(MeasuringViewModel), obj);
-            //_navigationService.Navigate<ListViewModel>();
+        //_navigationService.Navigate<MeasuringViewModel>();
+            if (obj.Type.Equals("Linear"))
+            {
+                _navigationService.Navigate(typeof(MeasuringViewModel), obj);
+            }
+            else if (obj.Type.Equals("Multi-Linear"))
+            {
+                _navigationService.Navigate(typeof(MeasuringMultiLevelViewModel), obj);
+            }
+            else
+                _navigationService.Navigate<MeasuringViewModel>();
 
 
         }));

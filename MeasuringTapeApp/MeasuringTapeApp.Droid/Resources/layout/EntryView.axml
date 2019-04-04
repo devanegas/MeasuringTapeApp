@@ -16,18 +16,21 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="Type: " />
-    <EditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          local:MvxBind="Text Obj.Type" />
+	<MvxSpinner
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		local:MvxBind="ItemsSource StatusList; SelectedItem Obj.Type"
+    />
     <TextView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="Unit System: " />
-    <EditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          local:MvxBind="Text Obj.UnitSystem" />
+
+	<MvxSpinner
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		local:MvxBind="ItemsSource Unit; SelectedItem Obj.Units"
+	/>
 
 	<Button
 		android:layout_width="match_parent"

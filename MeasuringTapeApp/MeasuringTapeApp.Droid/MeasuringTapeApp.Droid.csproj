@@ -64,6 +64,7 @@
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\EntryView.cs" />
     <Compile Include="Views\ListView.cs" />
+    <Compile Include="Views\MeasuringMultiLevelView.cs" />
     <Compile Include="Views\MeasuringView.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +156,9 @@
     <AndroidResource Include="Resources\drawable\launch_image.png" />
     <AndroidResource Include="Resources\values-v21\styles.xml" />
     <AndroidResource Include="Resources\drawable\splashscreen.xml" />
+    <AndroidResource Include="Resources\layout\MeasuringMultiLevelView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <Content Include="Resources\values\SplashStyle.xml">
       <SubType>Designer</SubType>
     </Content>
