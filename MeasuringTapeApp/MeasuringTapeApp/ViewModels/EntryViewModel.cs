@@ -10,6 +10,7 @@ using System.Text;
 
 namespace MeasuringTapeApp.ViewModels
 {
+
     public class EntryViewModel : MvxViewModel
     {
         private IMvxNavigationService _navigationService;
