@@ -4,9 +4,22 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
+	<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"/>
   <TextView
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
+      android:typeface="sans"
+	  android:textSize="14sp"
+      android:textColor="#d15c19"
+      android:textColorLink="#8DE67F"
+	  android:padding = "10dp"
       local:MvxBind="Text Print" />
+	<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray"/>
 
 </LinearLayout>
