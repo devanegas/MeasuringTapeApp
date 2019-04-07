@@ -18,7 +18,7 @@ namespace MeasuringTapeApp.Models
 
         public string Print
         {
-            get => $"Name: {Name}\nType: {Type}\nMeasurement: {Measurement}\nUnits: {Units}\n";
+            get => $"\u2022 Name: {Name}\n\u2022 Type: {Type}\n\u2022 Measurement: {Measurement}\n\u2022 Units: {Units}\n";
 
         }
     }
