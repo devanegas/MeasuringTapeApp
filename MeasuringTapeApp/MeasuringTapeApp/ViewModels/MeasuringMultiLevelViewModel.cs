@@ -30,7 +30,7 @@ namespace MeasuringTapeApp.ViewModels
 
         public async Task AsyncConstructor()
         {
-            measuredObjects = await _measuringStorageService.getAllMeasuredObjects();
+            measuredObjects = await _measuringStorageService.GetAllMeasuredObjects();
             RaisePropertyChanged(nameof(MeasuredObjects));
 
         }
@@ -139,7 +139,7 @@ namespace MeasuringTapeApp.ViewModels
             obj.Measurement = temp;
 
             //await RaisePropertyChanged(nameof(EndLocation));
-            await _measuringStorageService.UpdateMeasuredObject(obj);
+            _measuringStorageService.UpdateMeasuredObject(obj);
             await _navigationService.Navigate<ListViewModel>();
         }));
 

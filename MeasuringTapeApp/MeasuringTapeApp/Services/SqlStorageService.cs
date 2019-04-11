@@ -4,7 +4,9 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using MeasuringTapeApp.Data;
 using MeasuringTapeApp.Models;
+using Microsoft.EntityFrameworkCore;
 using SQLite;
 
 namespace MeasuringTapeApp.Services
@@ -13,15 +15,19 @@ namespace MeasuringTapeApp.Services
     {
 
         private readonly string filePath;
-        SQLiteAsyncConnection connection;
+        MeasureDbContext connection;
+        DbContextOptions<MeasureDbContext> options;
 
         public SqlStorageService()
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             filePath = Path.Combine(path, "measuredObjects.db3");
+            var optionsBuilder = new DbContextOptionsBuilder<MeasureDbContext>();
+            optionsBuilder.UseSqlite($"Data Source={filePath}");
 
-            connection = new SQLiteAsyncConnection(filePath);
-            connection.GetConnection().CreateTable<MeasuredObject>();
+            options = optionsBuilder.Options;
+//            connection = new MeasureDbContext(options);
+          
         }
 
         public async Task<bool> AddMeasuredObject(MeasuredObject obj)
@@ -30,18 +36,29 @@ namespace MeasuringTapeApp.Services
             {
                 throw new Exception("Cannot add null measured Object");
             }
-            await connection.InsertAsync(obj);
+            try
+            {
+                connection = new MeasureDbContext(options);
+                await connection.MeasuredObjects.AddAsync(obj);
+                await connection.SaveChangesAsync();
+
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e);
+            }
+     
             return true;
         }
 
-        public async Task<ObservableCollection<MeasuredObject>> getAllMeasuredObjects()
+        public async Task<ObservableCollection<MeasuredObject>> GetAllMeasuredObjects()
         {
-            return new ObservableCollection<MeasuredObject>(await connection.Table<MeasuredObject>().ToListAsync());
+            return new ObservableCollection<MeasuredObject>(await connection.MeasuredObjects.ToListAsync());
         }
 
-        public async Task<bool> UpdateMeasuredObject(MeasuredObject obj)
+        public bool UpdateMeasuredObject(MeasuredObject obj)
         {
-            await connection.UpdateAsync(obj);
+            connection.MeasuredObjects.Update(obj);
             return true;
         }
 
@@ -52,7 +69,7 @@ namespace MeasuringTapeApp.Services
 
         public async Task<bool> Reset()
         {
-            await connection.DeleteAllAsync<MeasuredObject>();
+            connection.MeasuredObjects.RemoveRange(await connection.MeasuredObjects.ToArrayAsync());
             return true;
         }
 

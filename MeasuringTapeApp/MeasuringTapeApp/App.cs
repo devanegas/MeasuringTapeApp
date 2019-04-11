@@ -1,4 +1,5 @@
-﻿using MeasuringTapeApp.Services;
+﻿using MeasuringTapeApp.Data;
+using MeasuringTapeApp.Services;
 using MeasuringTapeApp.ViewModels;
 using MvvmCross;
 using MvvmCross.ViewModels;
@@ -13,6 +14,7 @@ namespace MeasuringTapeApp
         public override void Initialize()
         {
             base.Initialize();
+            //Mvx.IoCProvider.RegisterType(typeof (MeasureDbContext), ()=>new MeasureDbContext());
             Mvx.IoCProvider.RegisterType<IMeasuringStorageService, SqlStorageService>();
             Mvx.IoCProvider.RegisterType<IGeolocationService, GeolocationService>();
 

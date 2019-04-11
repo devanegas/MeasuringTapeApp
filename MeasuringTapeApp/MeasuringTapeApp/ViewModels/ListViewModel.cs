@@ -34,7 +34,7 @@ namespace MeasuringTapeApp.ViewModels
 
         public async Task AsyncConstructor()
         {
-            measuredObjects = await _measuringStorageService.getAllMeasuredObjects();
+            measuredObjects = await _measuringStorageService.GetAllMeasuredObjects();
             RaisePropertyChanged(nameof(MeasuredObjects));
 
         }

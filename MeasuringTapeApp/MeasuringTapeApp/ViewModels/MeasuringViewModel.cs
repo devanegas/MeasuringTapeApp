@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
+using MeasuringTapeApp.Data;
 
 namespace MeasuringTapeApp.ViewModels
 {
@@ -17,7 +18,7 @@ namespace MeasuringTapeApp.ViewModels
         private IGeolocationService _geolocationService;
         private IMvxNavigationService _navigationService;
         private IMeasuringStorageService _measuringStorageService;
-
+        private MeasureDbContext _measureDbContext;
 
         public MeasuringViewModel(IMeasuringStorageService measuringStorageService,
                                 IMvxNavigationService navigationService, IGeolocationService geolocationService)
@@ -25,12 +26,13 @@ namespace MeasuringTapeApp.ViewModels
             _geolocationService = geolocationService;
             _navigationService = navigationService;
             _measuringStorageService = measuringStorageService;
+
             AsyncConstructor();
         }
 
         public async Task AsyncConstructor()
         {
-            measuredObjects = await _measuringStorageService.getAllMeasuredObjects();
+            measuredObjects = await _measuringStorageService.GetAllMeasuredObjects();
             RaisePropertyChanged(nameof(MeasuredObjects));
 
         }
@@ -85,7 +87,7 @@ namespace MeasuringTapeApp.ViewModels
             endLocation = await _geolocationService.GetLocationAsync();
             obj.Measurement = Location.CalculateDistance(startLocation, endLocation, DistanceUnits.Kilometers)*1000;
             await RaisePropertyChanged(nameof(EndLocation));
-            await _measuringStorageService.UpdateMeasuredObject(obj);
+            _measuringStorageService.UpdateMeasuredObject(obj);
             await _navigationService.Navigate<ListViewModel>();
         }));
 
