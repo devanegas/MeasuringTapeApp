@@ -13,7 +13,7 @@ using MvvmCross.Droid.Support.V7.AppCompat;
 namespace MeasuringTapeApp.Droid.Views
 {
     [Activity(Label = "Entry", MainLauncher = false)]
-    public class EntryView : MvxAppCompatActivity<EntryViewModel>
+    public class EntryView : MvxActivity<EntryViewModel>
     {
         private ImageView imageView;
 
@@ -23,12 +23,12 @@ namespace MeasuringTapeApp.Droid.Views
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.EntryView);
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
-            SetSupportActionBar(toolbar);
+            //var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            //SetSupportActionBar(toolbar);
 
-            var btnCamera = FindViewById<Button>(Resource.Id.btnCamera);
-            imageView = FindViewById<ImageView>(Resource.Id.imageView);
-            btnCamera.Click += BtnCamera_Click;
+            //var btnCamera = FindViewById<Button>(Resource.Id.btnCamera);
+            //imageView = FindViewById<ImageView>(Resource.Id.imageView);
+            //btnCamera.Click += BtnCamera_Click;
         }
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
