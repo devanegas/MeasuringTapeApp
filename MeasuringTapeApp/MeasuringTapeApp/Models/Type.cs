@@ -11,7 +11,8 @@ namespace MeasuringTapeApp.Models
         (
             statusList = new string[]{
                 "Linear",
-                "Multi-Linear"
+                "Multi-Linear",
+                "Walking"
             }
         );
 

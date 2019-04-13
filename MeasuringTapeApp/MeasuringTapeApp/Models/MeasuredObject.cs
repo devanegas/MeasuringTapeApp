@@ -15,7 +15,9 @@ namespace MeasuringTapeApp.Models
         public double Measurement { get; set; }
         public string Units { get; set; }
         public string UnitSystem { get; set; }
+        //public Bitmap image { get; set; }
 
+        //Hola Dieguin, ya vas a ver que si va a funcionar perro<3
         public string Print
         {
             get => $"Name: {Name}\nType: {Type}\nMeasurement: {Measurement}\nUnits: {Units}\n";
