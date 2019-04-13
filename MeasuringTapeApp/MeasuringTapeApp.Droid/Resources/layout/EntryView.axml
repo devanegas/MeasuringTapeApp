@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Object: " />
-    <EditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          local:MvxBind="Text Obj.Name" />
-    <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Type: " />
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:local="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	<ImageView
+		android:src="@android:drawable/ic_menu_gallery"
+		android:layout_width="match_parent"
+		local:MvxBind="DrawableName MyDrawable"
+		android:layout_height="wrap_content"
+		android:id="@+id/imageView1" />
+
+	<Button
+		android:text="Pick Image"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/MyButton" />
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Object: " />
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		local:MvxBind="Text Obj.Name" />
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Type: " />
 	<MvxSpinner
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		local:MvxBind="ItemsSource StatusList; SelectedItem Obj.Type"
     />
-    <TextView
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:text="Unit System: " />
-
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Unit System: " />
 	<MvxSpinner
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		local:MvxBind="ItemsSource Unit; SelectedItem Obj.Units"
 	/>
-
 	<Button
 		android:layout_width="match_parent"
 		android:layout_height="150px"

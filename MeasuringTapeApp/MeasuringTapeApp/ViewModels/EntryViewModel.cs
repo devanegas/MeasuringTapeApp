@@ -1,4 +1,6 @@
-﻿using MeasuringTapeApp.Models;
+﻿using Android.Graphics;
+using Android.Graphics.Drawables;
+using MeasuringTapeApp.Models;
 using MeasuringTapeApp.Services;
 using MeasuringTapeApp.ViewModels;
 using MvvmCross.Commands;
@@ -26,6 +28,18 @@ namespace MeasuringTapeApp.ViewModels
 
         public string[] StatusList => Models.Type.StatusList;
         public string[] Unit => Models.Type.Units;
+
+        private string _myDrawable;
+        public string MyDrawable
+        {
+            get { return _myDrawable; }
+            set
+            {
+                _myDrawable = value;
+                RaisePropertyChanged(() => MyDrawable);
+            }
+        }
+
 
         private MeasuredObject obj;
         private MvxCommand next;
