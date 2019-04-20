@@ -45,10 +45,11 @@ namespace MeasuringTapeApp.Services
             return true;
         }
 
-        //public async Task<MeasuredObject> getLastMeasuredObject()
-        //{
-        //    //TODO
-        //}
+        public async Task<bool> AddImage(MeasuredObject obj)
+        {
+            await connection.UpdateAsync(obj);
+            return true;
+        }
 
         public async Task<bool> Reset()
         {

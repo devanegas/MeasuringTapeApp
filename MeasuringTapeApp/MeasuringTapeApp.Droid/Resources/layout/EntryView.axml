@@ -8,7 +8,6 @@
 	<ImageView
 		android:src="@android:drawable/ic_menu_gallery"
 		android:layout_width="match_parent"
-		local:MvxBind="Bitmap RawImage, Converter=ByteArrayToImage"
 		android:layout_height="wrap_content"
 		android:id="@+id/imageView1" />
 

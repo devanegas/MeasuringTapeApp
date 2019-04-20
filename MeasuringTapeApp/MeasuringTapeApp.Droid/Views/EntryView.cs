@@ -7,14 +7,24 @@ using MeasuringTapeApp.ViewModels;
 using MvvmCross.Platforms.Android.Views;
 using Android.Net;
 using System;
+using MeasuringTapeApp.Services;
 
 namespace MeasuringTapeApp.Droid.Views
 {
     [Activity(Label = "Entry", MainLauncher = false)]
     public class EntryView : MvxActivity<EntryViewModel>
     {
+        IMeasuringStorageService _measuringStorageService;
+        public EntryView()
+        {
+            _measuringStorageService = new SqlStorageService();
+        }
+
         private ImageView _imageView;
+        
         public static readonly int PickImageId = 1000;
+
+
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,6 +51,9 @@ namespace MeasuringTapeApp.Droid.Views
             {
                 Android.Net.Uri uri = data.Data;
                 _imageView.SetImageURI(uri);
+
+                ViewModel.Obj.ImageUri = uri.ToString();
+                _measuringStorageService.UpdateMeasuredObject(ViewModel.Obj);
             }
         }
 
