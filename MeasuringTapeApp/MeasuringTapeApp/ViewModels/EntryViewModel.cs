@@ -1,22 +1,14 @@
-﻿using Android.Graphics;
-using Android.Graphics.Drawables;
-using MeasuringTapeApp.Models;
+﻿using MeasuringTapeApp.Models;
 using MeasuringTapeApp.Services;
-using MeasuringTapeApp.ViewModels;
 using MvvmCross.Commands;
-using MvvmCross.Converters;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
 
 namespace MeasuringTapeApp.ViewModels
 {
     public class EntryViewModel : MvxViewModel
     {
-        private ByteArrayToImageValueConverter converter;
+        //private ByteArrayToImageValueConverter converter;
         private IMvxNavigationService _navigationService;
         private IMeasuringStorageService _measuringStorageService;
         private IGeolocationService _geolocationService;
@@ -27,7 +19,7 @@ namespace MeasuringTapeApp.ViewModels
             _navigationService = navigationService;
             _measuringStorageService = measuringStorageService;
             _geolocationService = geolocationService;
-            converter = new ByteArrayToImageValueConverter();
+           // converter = new ByteArrayToImageValueConverter();
         }
 
         public string[] StatusList => Models.Type.StatusList;
@@ -44,19 +36,19 @@ namespace MeasuringTapeApp.ViewModels
             }
         }
 
-        private byte[] _rawImage;
-        public byte[] RawImage
-        {
-            get { return _rawImage; }
-            set
-            {
-                _rawImage = value;
-                if (_rawImage == null)
-                    return;
+        //private byte[] _rawImage;
+        //public byte[] RawImage
+        //{
+        //    get { return _rawImage; }
+        //    set
+        //    {
+        //        _rawImage = value;
+        //        if (_rawImage == null)
+        //            return;
 
-                var bitmap = BitmapFactory.DecodeByteArray(_rawImage, 0, _rawImage.Length);
-            }
-        }
+        //        var bitmap = BitmapFactory.DecodeByteArray(_rawImage, 0, _rawImage.Length);
+        //    }
+        //}
 
 
         private MeasuredObject obj;
@@ -91,13 +83,13 @@ namespace MeasuringTapeApp.ViewModels
 }
 
 
-public class ByteArrayToImageValueConverter : MvxValueConverter<byte[], Bitmap>
-{
+//public class ByteArrayToImageValueConverter : MvxValueConverter<byte[], Bitmap>
+//{
     
-    protected override Bitmap Convert(byte[] value, System.Type targetType, object parameter, CultureInfo culture)
-    {
-        if (value == null || value.Length == 0) { return null; }
-        return BitmapFactory.DecodeByteArray(value, 0, value.Length);
-    }
+//    protected override Bitmap Convert(byte[] value, System.Type targetType, object parameter, CultureInfo culture)
+//    {
+//        if (value == null || value.Length == 0) { return null; }
+//        return BitmapFactory.DecodeByteArray(value, 0, value.Length);
+//    }
 
-}
+//}
