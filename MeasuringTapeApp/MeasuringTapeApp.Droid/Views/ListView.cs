@@ -15,6 +15,9 @@ using MvvmCross.Platforms.Android.Views;
 using Android.Support.V7.Widget;
 using Android.Support.V7.Widget.Helper;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using Square.Picasso;
+using System.IO;
+
 namespace MeasuringTapeApp.Droid.Views
 {
     [Activity(Label = "Measurement")]
@@ -32,13 +35,20 @@ namespace MeasuringTapeApp.Droid.Views
             toolbar.InflateMenu(Resource.Menu.new_counter_menu);
             SetSupportActionBar(toolbar);
 
+            _imageView = FindViewById<ImageView>(Resource.Id.imageView);
+
             var recyclerView = FindViewById<MvxRecyclerView>(Resource.Id.recycler_view);
             recyclerView.SetLayoutManager(new LinearLayoutManager(this));
 
             var callback = new SwipeItemTouchHelperCallback(ViewModel);
             var touchHelper = new ItemTouchHelper(callback);
             touchHelper.AttachToRecyclerView(recyclerView);
-
+            if(ViewModel.MeasuredObjects.Count > 0)
+            {
+                Android.Net.Uri uri = Android.Net.Uri.Parse(ViewModel.MeasuredObjects[0].ImageUri);
+                Picasso.With(Application.Context).Load(uri).Into(_imageView);
+            }
+            
             // Set our view from the "main" layout resource
 
         }
@@ -48,7 +58,6 @@ namespace MeasuringTapeApp.Droid.Views
             ViewModel.Reset.Execute();
             return true;
         }
-
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
