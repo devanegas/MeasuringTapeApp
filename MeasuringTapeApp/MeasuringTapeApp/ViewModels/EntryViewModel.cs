@@ -75,8 +75,6 @@ namespace MeasuringTapeApp.ViewModels
             }
             else
                 _navigationService.Navigate<MeasuringViewModel>();
-
-
         }));
 
     }

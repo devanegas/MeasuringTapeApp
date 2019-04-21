@@ -21,17 +21,10 @@
 		android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-		
-	<ImageView
-		android:src="@android:drawable/ic_menu_gallery"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/imageView2" />
-
 		<mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
-		local:MvxBind="ItemsSource MeasuredObjects"
+		local:MvxBind="ItemsSource MeasuredObjects; ItemClick Update"
 		local:MvxItemTemplate="@layout/listitem" />
 
 		<android.support.design.widget.FloatingActionButton

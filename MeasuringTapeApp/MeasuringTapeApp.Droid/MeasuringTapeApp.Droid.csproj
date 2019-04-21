@@ -67,6 +67,7 @@
     <Compile Include="Views\MeasuringContinuousView.cs" />
     <Compile Include="Views\MeasuringMultiLevelView.cs" />
     <Compile Include="Views\MeasuringView.cs" />
+    <Compile Include="Views\UpdateView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -161,6 +162,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\MeasuringContinuousView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\UpdateView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <Content Include="Resources\values\SplashStyle.xml">
