@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+	
 	android:padding="10dp">
 	<android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -21,6 +22,8 @@
       local:MvxBind="Text Print" 
 	  android:id="@+id/recycler_view"
 	  android:padding="5dp"
+	android:textColor="@color/white"
+	  android:background="#4c4c4c"
 		/>
 
     </android.support.v7.widget.CardView>
