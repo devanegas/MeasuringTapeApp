@@ -14,10 +14,11 @@ using MeasuringTapeApp.ViewModels;
 using MvvmCross.Platforms.Android.Views;
 using Android.Support.V7.Widget;
 using Android.Support.V7.Widget.Helper;
+using MvvmCross.Droid.Support.V7.AppCompat;
 namespace MeasuringTapeApp.Droid.Views
 {
     [Activity(Label = "Measurement")]
-    public class ListView : MvxActivity<ListViewModel>
+    public class ListView : MvxAppCompatActivity<ListViewModel>
     {
         private ImageView _imageView;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -25,12 +26,11 @@ namespace MeasuringTapeApp.Droid.Views
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
 
-            //foreach (MeasuredObject obj in ViewModel.MeasuredObjects)
-            //{
-            //    _imageView = FindViewById<ImageView>(Resource.Id.imageView2);
-            //    _imageView.SetImageURI(Android.Net.Uri.Parse(obj.ImageUri));
-            //}
             SetContentView(Resource.Layout.ListView);
+
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            toolbar.InflateMenu(Resource.Menu.new_counter_menu);
+            SetSupportActionBar(toolbar);
 
             var recyclerView = FindViewById<MvxRecyclerView>(Resource.Id.recycler_view);
             recyclerView.SetLayoutManager(new LinearLayoutManager(this));
@@ -41,6 +41,21 @@ namespace MeasuringTapeApp.Droid.Views
 
             // Set our view from the "main" layout resource
 
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem menu)
+        {
+            ViewModel.Reset.Execute();
+            return true;
+        }
+
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            base.OnCreateOptionsMenu(menu);
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            toolbar.InflateMenu(Resource.Menu.new_counter_menu);
+            return true;
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
