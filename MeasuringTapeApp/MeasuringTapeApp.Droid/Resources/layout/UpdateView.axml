@@ -24,24 +24,7 @@
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		local:MvxBind="Text Obj.Name" />
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="Type: " />
-	<MvxSpinner
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		local:MvxBind="ItemsSource StatusList; SelectedItem Obj.Type"
-    />
-	<TextView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="Unit System: " />
-	<MvxSpinner
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		local:MvxBind="ItemsSource Unit; SelectedItem Obj.Units"
-	/>
+
 	<Button
 		android:layout_width="match_parent"
 		android:layout_height="150px"

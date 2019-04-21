@@ -13,5 +13,6 @@ namespace MeasuringTapeApp.Services
         Task<bool> AddMeasuredObject(MeasuredObject obj);
         Task<bool> UpdateMeasuredObject(MeasuredObject obj);
         Task<bool> Reset();
+        Task<bool> DeleteObject(MeasuredObject obj);
     }
 }

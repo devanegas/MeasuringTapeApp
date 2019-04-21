@@ -8,6 +8,8 @@
   <TextView
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      local:MvxBind="Text Print" />
+      local:MvxBind="Text Print" 
+	  android:id="@+id/recycler_view"
+		/>
 
 </LinearLayout>

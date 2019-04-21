@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using MvvmCross.Droid.Support.V7.RecyclerView;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -12,7 +12,8 @@ using Android.Widget;
 using MeasuringTapeApp.Models;
 using MeasuringTapeApp.ViewModels;
 using MvvmCross.Platforms.Android.Views;
-
+using Android.Support.V7.Widget;
+using Android.Support.V7.Widget.Helper;
 namespace MeasuringTapeApp.Droid.Views
 {
     [Activity(Label = "Measurement")]
@@ -29,11 +30,17 @@ namespace MeasuringTapeApp.Droid.Views
             //    _imageView = FindViewById<ImageView>(Resource.Id.imageView2);
             //    _imageView.SetImageURI(Android.Net.Uri.Parse(obj.ImageUri));
             //}
+            SetContentView(Resource.Layout.ListView);
 
+            var recyclerView = FindViewById<MvxRecyclerView>(Resource.Id.recycler_view);
+            recyclerView.SetLayoutManager(new LinearLayoutManager(this));
 
+            var callback = new SwipeItemTouchHelperCallback(ViewModel);
+            var touchHelper = new ItemTouchHelper(callback);
+            touchHelper.AttachToRecyclerView(recyclerView);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.ListView);
+
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

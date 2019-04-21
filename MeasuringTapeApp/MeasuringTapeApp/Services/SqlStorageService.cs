@@ -51,6 +51,12 @@ namespace MeasuringTapeApp.Services
             return true;
         }
 
+        public async Task<bool> DeleteObject(MeasuredObject obj)
+        {
+            await connection.DeleteAsync(obj);
+            return true;
+        }
+
         public async Task<bool> Reset()
         {
             await connection.DeleteAllAsync<MeasuredObject>();

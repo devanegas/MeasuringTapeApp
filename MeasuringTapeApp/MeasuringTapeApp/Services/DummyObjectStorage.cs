@@ -14,6 +14,11 @@ namespace MeasuringTapeApp.Services
             throw new NotImplementedException();
         }
 
+        public Task<bool> DeleteObject(MeasuredObject obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<ObservableCollection<MeasuredObject>> getAllMeasuredObjects()
         {
             var list = new ObservableCollection<MeasuredObject>();

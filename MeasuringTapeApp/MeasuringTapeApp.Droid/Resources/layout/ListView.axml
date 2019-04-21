@@ -24,6 +24,7 @@
 		<mvvmcross.droid.support.v7.recyclerview.MvxRecyclerView
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
+	    android:id="@+id/recycler_view"
 		local:MvxBind="ItemsSource MeasuredObjects; ItemClick Update"
 		local:MvxItemTemplate="@layout/listitem" />
 

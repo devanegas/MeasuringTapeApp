@@ -67,6 +67,7 @@
     <Compile Include="Views\MeasuringContinuousView.cs" />
     <Compile Include="Views\MeasuringMultiLevelView.cs" />
     <Compile Include="Views\MeasuringView.cs" />
+    <Compile Include="Views\SwipeItemTouchHelperCallback.cs" />
     <Compile Include="Views\UpdateView.cs" />
   </ItemGroup>
   <ItemGroup>
