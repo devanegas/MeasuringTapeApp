@@ -58,6 +58,12 @@ namespace MeasuringTapeApp.ViewModels
             _navigationService.Navigate<ListViewModel>();
         }));
 
+        private MvxCommand refresh;
+        public MvxCommand Refresh => refresh ?? (refresh = new MvxCommand(() =>
+        {
+            _navigationService.Navigate<ListViewModel>();
+        }));
+
         private MvxCommand<MeasuredObject> update;
         public MvxCommand<MeasuredObject> Update => update ?? (update = new MvxCommand<MeasuredObject>(onUpdate));
 

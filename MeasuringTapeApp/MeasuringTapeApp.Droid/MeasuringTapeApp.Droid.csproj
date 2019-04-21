@@ -172,6 +172,13 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\menu\new_counter_menu.xml" />
+    <AndroidResource Include="Resources\drawable\refresh.png" />
+    <AndroidResource Include="Resources\drawable\refreshbutton.png" />
+    <AndroidResource Include="Resources\drawable\add.png" />
+    <AndroidResource Include="Resources\drawable\reload.png" />
+    <AndroidResource Include="Resources\drawable\add2.svg" />
+    <AndroidResource Include="Resources\drawable\add3.png" />
+    <AndroidResource Include="Resources\drawable\reload2.png" />
     <Content Include="Resources\values\SplashStyle.xml">
       <SubType>Designer</SubType>
     </Content>

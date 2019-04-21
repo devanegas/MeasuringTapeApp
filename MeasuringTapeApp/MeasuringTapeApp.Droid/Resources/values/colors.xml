@@ -19,7 +19,7 @@
     <color name="blue">#0000FF</color>
     <color name="navy">#000080</color>
     <color name="black">#000000</color>
-
+  <color name="refreshGreen">#52a500</color>
     <color name="primary">#FF9800</color>
     <color name="primaryDark">#F57C00</color>
     <color name="accent">#FFC107</color>

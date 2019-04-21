@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:local="http://schemas.android.com/apk/res-auto"
+	xmlns:svgimageview="http://schemas.android.com/apk/res-auto"
 
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -33,7 +34,7 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="bottom|right"
 			android:layout_margin="16dp"
-			android:src="@drawable/plus"
+			android:src="@drawable/add3"
 			local:MvxBind="Click AddNewObject"/>
 
 		<android.support.design.widget.FloatingActionButton
@@ -42,9 +43,9 @@
 			android:layout_height="wrap_content"
 			android:layout_gravity="bottom|left"
 			android:layout_margin="16dp"
-			app:backgroundTint="@color/red"
-			android:src="@drawable/plus"
-			local:MvxBind="Click Reset"/>
+			app:backgroundTint="@color/refreshGreen"
+			app:srcCompat="@drawable/reload2"
+			local:MvxBind="Click Refresh"/>
 
 
 
