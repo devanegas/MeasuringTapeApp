@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MeasuringTapeApp.Models;
 using SQLite;
+using MvvmCross.Plugin.Messenger;
 
 namespace MeasuringTapeApp.Services
 {
@@ -14,7 +15,6 @@ namespace MeasuringTapeApp.Services
 
         private readonly string filePath;
         SQLiteAsyncConnection connection;
-
         public SqlStorageService()
         {
             var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);

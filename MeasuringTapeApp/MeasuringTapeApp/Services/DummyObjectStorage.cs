@@ -9,6 +9,8 @@ namespace MeasuringTapeApp.Services
 {
     public class DummyObjectStorage : IMeasuringStorageService
     {
+        
+
         public Task<bool> AddMeasuredObject(MeasuredObject comp)
         {
             throw new NotImplementedException();
@@ -50,5 +52,6 @@ namespace MeasuringTapeApp.Services
         {
             throw new NotImplementedException();
         }
+
     }
 }

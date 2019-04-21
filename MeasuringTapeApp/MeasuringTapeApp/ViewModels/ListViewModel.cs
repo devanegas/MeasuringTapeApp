@@ -45,6 +45,11 @@ namespace MeasuringTapeApp.ViewModels
             _navigationService.Navigate<EntryViewModel>();
         }));
 
+        public async Task<bool> DeleteObjectFromDatabase(MeasuredObject obj)
+        {
+            await _measuringStorageService.DeleteObject(obj);
+            return true;
+        }
 
         private MvxCommand reset;
         public MvxCommand Reset => reset ?? (reset = new MvxCommand(() =>

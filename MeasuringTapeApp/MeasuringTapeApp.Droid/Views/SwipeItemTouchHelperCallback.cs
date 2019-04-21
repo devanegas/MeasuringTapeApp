@@ -15,13 +15,13 @@ namespace MeasuringTapeApp.Droid.Views
 {
     public class SwipeItemTouchHelperCallback : ItemTouchHelper.SimpleCallback
     {
-        IMeasuringStorageService measuringStorageService;
+
         readonly ListViewModel viewModel;
         public SwipeItemTouchHelperCallback(ListViewModel viewModel)
             : base(0, ItemTouchHelper.Start)
         {
             this.viewModel = viewModel;
-            measuringStorageService = new SqlStorageService();
+            
         }
 
         public override bool OnMove(RecyclerView recyclerView,
@@ -33,10 +33,16 @@ namespace MeasuringTapeApp.Droid.Views
 
         public override void OnSwiped(RecyclerView.ViewHolder viewHolder, int direction)
         {
-            measuringStorageService.DeleteObject(viewModel.MeasuredObjects[viewHolder.AdapterPosition]);
+
+            viewModel.DeleteObjectFromDatabase(viewModel.MeasuredObjects[viewHolder.AdapterPosition]);
+            viewModel.MeasuredObjects.Remove(viewModel.MeasuredObjects[viewHolder.AdapterPosition]);
+            //measuringStorageService.DeleteObject(viewModel.MeasuredObjects[viewHolder.AdapterPosition]);
+
+            
         }
 
         readonly Drawable background = new ColorDrawable(Color.Rgb(255, 114, 114));
+        Drawable background2 = new ColorDrawable(Color.White);
 
         public override void OnChildDraw(Canvas c, RecyclerView recyclerView,
                                          RecyclerView.ViewHolder viewHolder,
@@ -51,6 +57,7 @@ namespace MeasuringTapeApp.Droid.Views
 
             base.OnChildDraw(c, recyclerView, viewHolder, dX, dY,
                              actionState, isCurrentlyActive);
+
         }
     }
 }
