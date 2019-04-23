@@ -20,7 +20,7 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       local:MvxBind="Text Print" 
-	  android:id="@+id/recycler_view"
+	  android:id="@+id/textView"
 	  android:padding="5dp"
 	android:textColor="@color/white"
 	  android:background="#4c4c4c"
